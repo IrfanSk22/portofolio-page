@@ -1,5 +1,15 @@
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
+<!-- 
+author:Irfan Shaikh
+
+About this project: This is project is build while coding Along with my udemy instructor Angela Yu and it's modified 
+by the author (i.e.Irfan Shaikh) for passing the FreeCodeCamp Tests. In other words this project is made by
+me only but while learning:)
+
+This is not my main portofolio website this is built for practice purposes.But the #profile-links are genuine.
+ -->
+
 <!DOCTYPE html>
 <html>
 
@@ -14,65 +24,86 @@
 
 <body>
 
-	<nav id="navbar">
-		<a class="nav-brand" href="#">ISK</a>
-		<ul class="nav-list">
-			<li class="nav-item"><a class="nav-link" href="#about-me">About Me</a></li>
-			<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-			<li class="nav-item"><a class="nav-link" href="#contact-me">Contact Me</a></li>
-		</ul>
-	</nav>
+	<header>
+		<!-- Navbar -->
+		<nav id="navbar">
+			<a class="nav-brand" href="#">ISK</a>
+			<ul class="nav-list">
+				<li class="nav-item"><a class="nav-link" href="#about-me">About Me</a></li>
+				<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+				<li class="nav-item"><a class="nav-link" href="#contact-me">Contact Me</a></li>
+			</ul>
+		</nav>
 
-	<div id="welcome-section">
-		<img class="top-cloud" src="images/cloud.png" alt="cloud-image" />
-		<h1>I'm Irfan.</h1>
-		<h2>A <span class="pro">Pro</span>grammer.</h2>
-		<img class="bottom-cloud" src="images/cloud.png" alt="cloud-image" />
-		<img class="mountain-img" src="images/mountain.png" alt="mountain-image" />
-	</div>
-	<div id="about-me">
-		<div class="profile">
-			<img class="" src="images/irfan.png" alt="Irfan's Profile Photo">
-			<h2>Hello there!</h2>
-			<p class="intro">I am an Aspiring <strong>Full Stack Developer</strong> and a <strong>Competitive
-					Programmer</strong>.</p>
+		<!-- Welcome Section -->
+		<div id="welcome-section">
+			<img class="top-cloud" src="https://github.com/IrfanSk22/portofolio-page/blob/master/images/cloud.png?raw=true"
+				alt="cloud-image" />
+			<h1>I'm Irfan.</h1>
+			<h2>A <span class="pro">Pro</span>grammer.</h2>
+			<img class="bottom-cloud" src="https://github.com/IrfanSk22/portofolio-page/blob/master/images/cloud.png?raw=true"
+				alt="cloud-image" />
+			<img class="mountain-img" src="https://github.com/IrfanSk22/portofolio-page/blob/master/images/mountain.png?raw=true"
+				alt="mountain-image" />
 		</div>
-		<hr>
-		<div id="projects">
-			<h2>My Skills.</h2>
-			<div class="skill-row">
-				<img class="computer-image" src="images/computer.png" alt="computer's image">
-				<h3 class="project-tile">Design & Development</h3>
-				<p>Lorem ipsum dolor sit amet, quis in duis, iaculis id felis. Consectetuer vestibulum, nunc urna
-					lectus, erat
-					ligula. Hendrerit nam, lectus ante, ut lorem eros. <a href="#">see code</a> </p>
+	</header>
+
+	<main>
+		<!-- About Me -->
+		<div id="about-me">
+			<div class="profile">
+				<img class="" src="https://github.com/IrfanSk22/portofolio-page/blob/master/images/irfan.png?raw=true"
+					alt="Irfan's Profile Photo">
+				<h2>Hello there!</h2>
+				<p class="intro">I am an Aspiring <strong>Full Stack Developer</strong> and a <strong>Competitive
+						Programmer</strong>.</p>
 			</div>
-			<div class="skill-row">
-				<img class="chillies-image" src="images/chillies.png" alt="chillies image">
-				<h3 class="project-tile">Lorem Ipsum Dolor</h3>
-				<p>Lorem ipsum dolor sit amet, mauris sed consectetuer. Etiam et eu, bibendum interdum, lacus quis
-					mauris.
-					Curabitur wisi, quisque vel eu, rutrum nam. <a href="#">see code</a> </p>
+			<hr>
+
+			<!-- Projects -->
+			<div id="projects">
+				<h2>My Projects.</h2>
+				<div class="project-row">
+					<img class="computer-image"
+						src="https://github.com/IrfanSk22/portofolio-page/blob/master/images/computer.png?raw=true"
+						alt="computer's image">
+					<h3 class="project-tile">Design & Development</h3>
+					<p>Lorem ipsum dolor sit amet, quis in duis, iaculis id felis. Consectetuer vestibulum, nunc urna
+						lectus, erat
+						ligula. Hendrerit nam, lectus ante, ut lorem eros. <a href="#"> see code</a> </p>
+				</div>
+				<div class="project-row">
+					<img class="chillies-image"
+						src="https://github.com/IrfanSk22/portofolio-page/blob/master/images/chillies.png?raw=true"
+						alt="chillies image">
+					<h3 class="project-tile">Lorem Ipsum Dolor</h3>
+					<p>Lorem ipsum dolor sit amet, mauris sed consectetuer. Etiam et eu, bibendum interdum, lacus quis
+						mauris.
+						Curabitur wisi, quisque vel eu, rutrum nam. <a href="#"> see code</a>
+					</p>
+				</div>
 			</div>
-		</div>
-		<hr>
-		<div id="contact-me">
-			<h2>Get In Touch</h2>
-			<h3>Lorem ipsum dolor sit amet, non elit.</h3>
-			<p class="contact-message">Lorem ipsum dolor sit amet, in quis, aenean amet. Phasellus sodales, tellus donec
-				dui,
-				ornare erat.</p>
-			<a class="btn" href="#">CONTACT ME</a>
-		</div>
+	</main>
+	<hr>
+
+	<!-- Contact Me -->
+	<div id="contact-me">
+		<h2>Get In Touch</h2>
+		<h3>Lorem ipsum dolor sit amet, non elit.</h3>
+		<p class="contact-message">Lorem ipsum dolor sit amet, in quis, aenean amet. Phasellus sodales, tellus donec
+			dui,ornare erat.
+		</p>
+		<a class="btn" href="mailto:skirfan6663.si@gmail.com">CONTACT ME</a>
+	</div>
 	</div>
 
-
-	<div class="bottom-container">
-		<a id="profile-link" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-		<a id="profile-link" href="https://twitter.com/">Twitter</a>
+	<!--Footer -->
+	<footer class="bottom-container">
+		<a id="profile-link" href="https://www.facebook.com/profile.php?id=100009371747823" target="_blank">Facebook</a>
+		<a id="profile-link" href="https://www.instagram.com/_irfan__sk_/" target="_blank">Instagram</a>
 		<a id="profile-link" href="https://github.com/irfansk-22" target="_blank">Github</a>
-		<p class="copyright"><sub>©</sub> 2020 Irfan Shaikh.</p>
-	</div>
+		<p class="copyright">© 2020 Irfan Shaikh.</p>
+	</footer>
 
 </body>
 
