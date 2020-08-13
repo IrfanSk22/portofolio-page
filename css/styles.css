@@ -10,56 +10,20 @@ body {
   font-family: "Merriweather", serif;
 }
 
-
-#navbar {
-  opacity: 0.9;
-  background-color: #e4f9f5;
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  z-index: 2;
-}
-
-.nav-brand {
-  font-size: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#navbar .nav-list {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-}
-
-.nav-item {
-  white-space: nowrap;
-}
-
-.nav-item:hover {
- background-color: rgb(245, 250, 250);
-}
-
-.nav-link {
-  display: block;
-  padding: 5px 10px;
-}
-
 h1 {
-  margin: 50px auto 0 auto;
+  margin: 30px auto 0 auto;
   font-family: "Sacramento", cursive;
-  font-size: 5.625rem;
+  font-size: 5.25rem;
   color: #66bfbf;
 }
 
 h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: normal;
   color: #66bfbf;
   padding-bottom: 10px;
+  z-index: 20;
 }
 
 h3 {
@@ -71,6 +35,13 @@ p {
   line-height: 2;
 }
 
+a {
+  color: #11999e;
+  font-family: "Montserrat", sans-serif;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
 hr {
   border-style: none;
   border-top-style: dotted;
@@ -79,6 +50,49 @@ hr {
   width: 5%;
   margin: 100px auto;
 }
+
+/* Navbar */
+
+#navbar {
+  opacity: 0.9;
+  padding: 0 5rem;
+  background-color: #e4f9f5;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 10;
+}
+
+.nav-brand {
+  font-weight: bold;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-brand:hover {
+  color: rgb(23, 185, 214);
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.nav-item:hover {
+  background-color: rgb(247, 251, 251);
+}
+
+.nav-link {
+  display: block;
+  padding: 5px 10px;
+  white-space: nowrap;
+}
+
+/* Welcome Section */
 
 #welcome-section {
   background-color: #e4f9f5;
@@ -91,18 +105,8 @@ hr {
   margin: 100px 0;
 }
 
-.bottom-container {
-  background-color: #66bfbf;
-  padding: 50px 0 20px;
-}
-
 .pro {
   text-decoration: underline;
-}
-
-.intro {
-  width: 30%;
-  margin: auto;
 }
 
 .top-cloud {
@@ -117,10 +121,35 @@ hr {
   left: 250px;
 }
 
-.skill-row {
+.mountain-img {
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  width: 40vw;
+  z-index: 0;
+}
+
+/* About Me Section */
+
+.intro {
+  width: 30%;
+  margin: auto;
+}
+
+/* Projects Section*/
+
+.project-row {
   width: 50%;
   margin: 100px auto 100px auto;
   text-align: left;
+}
+
+.project-row a {
+  text-decoration: underline;
+}
+
+.project-row a:hover {
+  color: #333;
 }
 
 .computer-image {
@@ -135,81 +164,117 @@ hr {
   margin-left: 30px;
 }
 
+/* Contact Me Section */
+
 .contact-message {
   width: 40%;
-  margin: 40px auto 60px;
+  margin: 30px auto 40px;
 }
 
 .btn {
   background: #11cdd4;
-  background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
-  background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
-  background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
-  background-image: -o-linear-gradient(top, #11cdd4, #11999e);
   background-image: linear-gradient(to bottom, #11cdd4, #11999e);
-  -webkit-border-radius: 8;
-  -moz-border-radius: 8;
   border-radius: 8px;
   font-family: "Montserrat", sans-serif;
-  color: #ffffff;
+  color: #fff;
   font-size: 20px;
-  padding: 10px 20px 10px 20px;
+  padding: 15px;
   text-decoration: none;
 }
 
 .btn:hover {
   background: #30e3cb;
-  background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
-  background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
-  background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
-  background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
   background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
   text-decoration: none;
 }
 
-a {
-  color: #11999e;
-  font-family: "Montserrat", sans-serif;
-  margin: 10px 20px;
-  text-decoration: none;
-}
+/* Footer */
 
-.bottom-container a:hover {
-  color: #eaf6f6;
+.bottom-container {
+  margin-top: 100px;
+  background-color: #66bfbf;
+  padding: 50px 0 20px;
 }
 
 #profile-link {
   color: #11999e;
 }
 
+#profile-link:hover {
+  color: #eaf6f6;
+}
+
 .copyright {
   color: #eaf6f6;
   font-size: 0.75rem;
   padding: 20px 0;
+  opacity: 0.9;
 }
 
-@media (max-width: 800px) {
+/* Media Queries */
+
+@media (max-width: 1100px) and (min-width: 850px) {
+  h1 {
+    margin-top: 5.5rem;
+  }
+}
+
+@media (max-width: 1100px) {
+
+  /* Welcome Section */
   .mountain-img {
-    max-width: 80vw;
+    display: none;
   }
 
-  #navbar {
-    flex-direction: column;
+  .top-cloud {
+    top: 20vh;
+    right: 7vh;
   }
   
-  .nav-list {
-    margin: 10px auto;
+  .bottom-cloud {
+    top: 82vh;
+    left: 8vh;
   }
 }
 
-/*
-text-align center inside the container or the parent element will center everything 
-inside that doesn't have the width set. Now if it is a block element that has a width
-set then we're going to have to center it using "auto" value in the margin.
-*/
+@media (max-width: 850px) {
+  h1 {
+    margin-top: 7.5rem;
+    font-size: 4.5rem;
+  }
 
-/*
-line-height: 2;
-The important to remember about "line height" is that the preferred way of specifying line height
-is to give value without any units.
-*/
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Navbar */
+  #navbar {
+    padding: 0 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-list {
+    margin: 0;
+  }
+
+  /* About Me Section */
+  .intro {
+    width: 60vw;
+  }
+
+  /* Projects Section */
+  .project-row {
+    width: 75vw;
+    text-align: justify;
+  }
+
+  .project-row a {
+    margin: 0;
+  }
+
+  /* Contact Me Section */
+  .contact-message {
+    width: 75vw;
+  }
+}
