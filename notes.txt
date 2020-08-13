@@ -1,0 +1,302 @@
+🔶<div>
+
+"div" is a special HTML element that allows us to divide our content up on our website so 
+that we can structure each "div" separately.
+- by it self it doesn't do anything unless we use CSS with it.
+- essentialy a "div" stands for a content division element. It basically allows us to split 
+up or divide our content into separate containers or boxes so that we can affect the layout 
+of each box separately. 
+- "div" can have height if we specified it using the styles but it will also have a height 
+if it has content.
+
+- "span" like "div" don't do very much unless they're used in conjunction with CSS.
+
+
+🔶The Box Model
+
+- As we know that every single HTML element on screen is just treated as a box by our CSS, 
+and by styling that box by changing its "widht", its "height", its "padding", its "borders",
+its "margin" that's how we determine how our elements can be laid out and how it will show
+up on the screen.
+- So, for example if we specified a CSS rule that targeted on a image (img { widht: 100%;})
+all that's gonna do is it's going to change the widht of that box to 100 percent, and in the 
+process scales up our image so that it expands to fill the entire widht of the screen.
+- And this concept in CSS is lovingly known as "Box Model".
+
+
+Viewport: Viewport is just a screen that we're viewing the web site on. So, that can be a 
+mobile screen or laptop screen or an ipad screen etc.
+
+
+🔶CSS Display Property
+
+- Display property has four different values.
+
+    - Block 
+    - Inline
+    - Inline-Block
+    - None
+
+(1) Block elements
+
+by default some elements are what's called block display, and block elements are those that
+take up essentialy the whole width of the screen on a web page. So, effectively blocking out
+any other elements from sitting next to it on the left or on the right.
+
+🔹Common block elements
+
+    - Paragraphs(<p>)
+    - Headers(<h1> through <h6>)
+    - Divisions(<div>)
+    - Lists and list items(<ol>, <ul> and <li>)
+    - forms(<form>)
+
+(2) Inline elements
+
+the "span" element is what's known as an "inline display element". So, unlike block display
+element an inline display only takes up as much space as it needs to in the hight and it's 
+width.
+
+🔹Common inline elements
+
+    - Spans(<span>)
+    - Images(<img>)
+    - Anchors(<a>)
+ 
+
+❔Why would we ever use block elements if we can simply use an inline elements, Surely it 
+seems far more flexible.
+-> Well ther's one problem with inline elements, we can't actually change the width of an 
+inline element, but we can change the widht of a block element but still they won't be on the 
+same line.
+So, what can we do?
+Well, we can actually change the display property of any given element. So I can make a 
+paragraph element which we know by default is a block element, I can change its display value 
+to be inline, and that makes all our paragraphs inline elements and allows everything to sit
+next to each other on the same line. But we will lost the ability to change its width.
+
+example:
+
+    p {
+        background-color: red;
+        display: inline;
+        width: 100px;
+        //After making paragraph which is a block element "inline" we will be no longer able 
+        //to change it's width so "width: 100px;" will have no effects.
+    }
+
+Similarly, I can change the display property of our inline element to "block" elements, and 
+this allows us to change the widht but it doesn't let them sit on the same line.
+
+(3) Inline-block elements
+
+❔So, What should I do if I wanted elements that can occupy the same line and at the same time 
+I can set their width.
+-> There is another type of display which is called "inline-block" and this kind of gives 
+the best of both worlds. So, If instead of changing the paragraph element to inline if we 
+change it to "inline-block" then we will not only able to change its widht but also able to 
+make them go onto the same line :)
+
+
+//image element are KIND OF "inline-block" elements by default, because we're able to change 
+//its width and height and they also displayed as if they're inline elements next to each 
+//other.
+
+(4) None
+
+- "none" will simply display none and that just gets rid of our element.
+- if we set certain element display to "none" it will hide it and remove it from where it 
+was And it will seem like we have deleted it but we haven't.
+- This is helpful when we want to hide certain things in our web page for example if i had 
+a quiz, then we might wanna hide answers.
+
+    There is two way of doing this(hiding content)
+    (1) using "none" display property
+    (2) using one of the CSS property known as "visibility",
+        example:
+            p {
+                visibility: hidden;
+            }
+    and this makes the element dissapear, but it will save it places where it was.
+
+To see proper example in code of display properties head over to below link,
+https://codepen.io/skIrfan/pen/eYJpOEx?editors=1100
+
+
+🔶CSS Positioning Property
+
+- Even without CSS HTML elements already has predefined rules for how it should be displayed 
+on web page.
+
+(1) content is everything.
+- Now we know that inline elements only take up as much width and as much height as the 
+content AND with block elements, even though they take up 100 percent of the width, the 
+height is still determined by the content.
+
+- So content is the first thing that determine how large things gets displayed and what the
+height and widht will be and this is despite any CSS.
+
+(2) Order Comes From code
+- Order of the elements on the screen comes from HTML code.
+
+(3) Children Sit On Parents
+- By default all HTML elements that are children, they will sit on top of the parent element.
+
+So, above three are the default rules for how things get rendered on screen just based on 
+HTML code.
+
+🔸 We can set a CSS property which is the "position" property in order to get position elements
+on the screen the way that we want to instead of just going along with the default layout, 
+and in most cases we want to make changes to the default layout.
+
+🔹 types of positioning 
+
+    - Static
+    - Relative
+    - Absolute
+    - Fixed
+
+(1) Static
+- All HTML elements are Static in their position by default. 
+- Static just means go along with the HTML rules and keep to the default HTML flow.
+
+(2) Relative
+- This allows us to position the element that we select relative to how it would have been 
+positioned had it been static.
+
+- In relative positioning we have to set it's cordinate properties as well which is,
+    top
+    bottom
+    left
+    right
+
+Important things to remember when dealing with relative positioning,
+* When we move an element that has a relative position, it doesn't affect the position of
+anything else on the screen.
+* When we change cordinates properties it goes opposite to what property we have used.
+
+(3) Absolute 
+- Absolute positioning means that we're adding the margin to it's parent element.
+//we have to set parent element position to relative.
+
+📝Important things to remember while using Absolute positioning,
+* When we move an element that has absolute position, it does affect the flow of HTML.
+//unline, relative positioning when we move an element, it lefts some sort of ghost element 
+//where it was and it keeps the positions of everything else the same.
+//but when we're using absolute positioning, we're actually taking the element out of the 
+//flow of the document and it's no longer considered a part of the natural flow of the document.
+
+* The cool thing about absolute positioning is that we can move the element anywhere on the
+screen relative to its parent.
+
+* The parent doesn't always have to be the body. it can also be the closest parent that has
+a relative layer.
+
+(4) fixed 
+- If we change certain elements position to fixed to some cordinate then if we scroll to the
+web page it will stay in its current position.
+
+
+🔶CSS fonts
+
+There are two major font family,
+
+    - Sans-Serif
+    - Serif
+
+- by default the font-family is "Serif".
+- For most browser the default serif is "Times font" and the default sans-serif is "Arial".
+
+example:
+
+    body {
+    font-family: verdana, sans-serif;
+    }
+
+
+- What the above line of code does is that it sets the font family for all the text inside 
+the body but it first asks the browser to try and render all the text in Verdana font. 
+Now, If for some reason the browser or the operating system that user is using doesn't 
+have this font installed, then it will default to whatever is the sans-serif font that 
+is installed on their system.
+
+- Now that's a little bit scary because that kind of means that I might think that I've 
+designed my web site look like something but on somebody's else's system or browser they 
+might be getting a completely different style with different font heights and just a different 
+look and feel.
+
+- So, there is such things called "web safe fonts". Now what this means is that there is a 
+set of font families where most operating system will be able to render it correctly.
+
+- Although these are web safe fonts and it's basically saying that if you choose these sets 
+of fonts then you have the maximum chance of getting it rendered correctly as you're seeing 
+yourself when you're designing it but "ACTUALLY NO FONT IS 100 PERCENT WEB SAFE".
+
+📁head over to below link to see the availibility of fonts in differnt operating system,
+https://www.cssfontstack.com/
+
+
+❔What can I do ensure that everybody has the same viewing experience with regards to the 
+fonts on my website.
+-> Well, we can you use somthing called font embedding. So if we head over to https://fonts.google.com/,
+then we can see that they've got a whole bunch of font families that we can choose from.
+And these are all fonts that are free for commercial use that you can simply embed into our 
+website.
+
+🔶 Lorem Ipsum 
+
+- This is something that is used quite frequently in web design.
+- It's used to place text paragraphs in a web site before you have any content.
+
+head over to below link to know more about lorem ipsum,
+https://loremipsum.io/
+
+📁some good resources for images,
+https://www.flaticon.com/
+//free for commercial use as long as we give adequate attribution.
+https://giphy.com/
+//resource for image that is animated gif
+
+🔶 font sizing 
+
+- Dynamic font size
+
+In order to make font size dynamic there is two options, 
+(1) instead of using pixels, we can use something lika a percentage.
+
+    100% == 16px
+
+(2) Now other of specifying a dynamic font size in other way is by using a unit called 
+the em. 
+
+em in CSS font sizing is phonetic pronounciation of the letter M, and the reason is because
+in typesetting in the olden days that em, or the M is the width of the capital letter M,
+and so that means when you say 1em then you want the size to be 1 times the width of the 
+capital letter M and if you want 2 then that's double size of the M, etc etc.
+NOW,
+In modern days this is no longer true but what is true is that "1em or 1M == 16 px".
+
+                        16px == 100% == 1em or 1M
+
+
+
+
+So, the beauty of "rem" is that it does not get affected by upstream size changes and it
+means that it's easier to debug it's less likely that  something will go wrong.
+
+tip: When sizing text it is recommened to use "rem" instead of em or percantage or pixels.
+because that is the most adaptabel and also the most reliable and least error prone.
+
+
+🔶CSS Float and Clear
+
+As they say with great power comes great responsiblility. Float is one of the most commonly
+used and abused CSS properties.
+The thing to remeber is that it has a whole bunch of corner cases. And It is recommened that 
+to only use float when really really necessary and only use if for what it's meant, which 
+is wrapping text around a certain element, and don't use it for positioning.
+
+https://bendezuj.github.io/CSS-Website/
+https://erro-95.github.io/Personal-Site/
+
+If you set an element's margin to a negative value, the element will grow larger.
